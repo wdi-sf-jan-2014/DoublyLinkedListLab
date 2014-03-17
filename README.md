@@ -3,14 +3,16 @@ DoublyLinkedListLab
 
 A lab to implement a doubly linked list in ruby.  Use the specs for node and list to implement a doubly linked list.
 
-For the list implementation, the methods should have a similar interface to ruby array.  Here are the first methods you should implement:
+__FIRST__: Work on the node class and get the specs passing.
+
+__SECOND__: For the list implementation, the methods should have a similar interface to ruby array.  Here are the first methods you should implement:
 
 * new (initialize)
 * push
 * pop
 * length
 
-Next, work on these methods:
+__THIRD__: work on these methods:
 
 * []
 * []=
@@ -21,7 +23,7 @@ Next, work on these methods:
 * insert
 * delete_at
 
-Finally, if you have time, implement the following methods:
+__LASTLY__: if you have time, implement the following methods:
 
 * reverse
 * max
