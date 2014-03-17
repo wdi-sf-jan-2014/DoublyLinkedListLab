@@ -60,4 +60,51 @@ describe List do
     list[0] = 5
     expect(list[0]).to eq(5)
   end
+
+  it 'gets the first of last value' do
+    expect(list).to respond_to(:first)
+    expect(list).to respond_to(:last)
+
+    list.push(1)
+
+    expect(list.first).to eq(1)
+    expect(list.last).to eq(1)
+
+    list.push(2)
+
+    expect(list.first).to eq(1)
+    expect(list.last).to eq(2)
+  end
+
+  it 'can insert and takes 2 arguments' do
+    expect(list).to respond_to(:insert).with(2).arguments
+  end
+
+  it 'can insert into an empty list' do
+    list.insert(0, 10)
+    expect(list.length).to eq(1)
+    expect(list[0]).to eq(10)
+  end
+
+  it 'can insert into the middle of a list' do
+    list.push(1)
+    list.push(2)
+    list.push(3)
+    list.insert(1,99)
+
+    expect(list.length).to eq(4)
+    expect(list[0]).to eq(1)
+    expect(list[1]).to eq(99)
+    expect(list[2]).to eq(2)
+  end
+
+  it 'can insert at the end of the list' do
+    list.push(1)
+    list.push(2)
+    list.insert(2, 99)
+
+    expect(list.length).to eq(3)
+    expect(list[1]).to eq(2)
+    expect(list[2]).to eq(99)
+  end
 end
